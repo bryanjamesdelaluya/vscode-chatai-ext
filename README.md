@@ -44,7 +44,7 @@ This will download the DeepSeek R1 model, which is optimized for coding assistan
 1. Clone this repository:
    ```bash
    git clone <repository-url>
-   cd careerteam-1-0-devs
+   cd vscode-chatai-ext
    ```
 
 2. Install dependencies:
