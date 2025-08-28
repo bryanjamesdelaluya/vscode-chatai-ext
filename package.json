@@ -1,0 +1,52 @@
+{
+  "name": "careerteam-1-0-devs",
+  "displayName": "CareerTeam 1.0 Devs",
+  "publisher": "Career Team 1.0",
+  "description": "Dev Assistant by Team1.0",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.103.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:careerteam-1-0-devs.start",
+    "onCommand:careerteam-1-0-devs.test"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "careerteam-1-0-devs.start",
+        "title": "Career Team 1.0 Chat"
+      },
+      {
+          "command": "careerteam-1-0-devs.test",
+          "title": "Test Ollama Connection"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.103.0",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.32.0",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "ollama": "^0.5.17"
+  }
+}
